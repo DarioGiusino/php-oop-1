@@ -12,4 +12,9 @@ class Movie
         $this->director = $_director;
         $this->language = $_language;
     }
+
+    public function getFullDescription()
+    {
+        return "$this->title, un film in $this->language diretto da $this->director";
+    }
 }
