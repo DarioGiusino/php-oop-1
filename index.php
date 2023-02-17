@@ -18,3 +18,6 @@ class Movie
         return "$this->title, un film in $this->language diretto da $this->director";
     }
 }
+
+$first_film = new Movie('007, dalla Russia con Amore', 'inglese', 'Terence Young');
+$second_film = new Movie('007, Skyfall', 'inglese', 'Sam Mendes');
