@@ -19,8 +19,8 @@ class Movie
     }
 }
 
-$first_film = new Movie('007, dalla Russia con Amore', 'inglese', 'Terence Young');
-$second_film = new Movie('007, Skyfall', 'inglese', 'Sam Mendes');
+$first_film = new Movie('007, dalla Russia con Amore', 'Terence Young', 'inglese');
+$second_film = new Movie('007, Skyfall', 'Sam Mendes', 'inglese');
 
 // var_dump($first_film, $second_film);
 
