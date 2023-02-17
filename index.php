@@ -21,3 +21,7 @@ class Movie
 
 $first_film = new Movie('007, dalla Russia con Amore', 'inglese', 'Terence Young');
 $second_film = new Movie('007, Skyfall', 'inglese', 'Sam Mendes');
+
+// var_dump($first_film, $second_film);
+
+echo "{$first_film->getFullDescription()} </br> {$second_film->getFullDescription()}";
