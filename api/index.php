@@ -1,7 +1,7 @@
 <?php
 
-include_once __DIR__ . '/models/Movie.php';
-include_once __DIR__ . '/data/db.php';
+include_once __DIR__ . '/../models/Movie.php';
+include_once __DIR__ . '/../data/db.php';
 
 // // var_dump($movies)
 
