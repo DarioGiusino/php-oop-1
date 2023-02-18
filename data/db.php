@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . '/../models/Movie.php';
+include_once __DIR__ . '/../models/Genre.php';
 
 //db constant
 const HOSTNAME = 'localhost';
@@ -22,7 +23,7 @@ try {
 //try a query
 try {
     //define a query string
-    $sql = 'SELECT `title`, `language`, `director` FROM `movie`';
+    $sql = 'SELECT `title`, `language`, `director`, `genre_1`, `genre_2` FROM `movies`';
     // // var_dump($sql);
 
     //query the db
@@ -36,7 +37,7 @@ try {
         //while the db continuing answer
         while ($movie = $res->fetch_assoc()) {
             //push the answer in array
-            $movies[] = new Movie($movie['title'], $movie['director'], $movie['language']);
+            $movies[] = new Movie($movie['title'], $movie['director'], $movie['language'], new Genre([$movie['genre_1'], $movie['genre_2']]));
         }
     } else {
         echo 'No results';
