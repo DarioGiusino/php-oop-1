@@ -23,7 +23,7 @@ try {
 //try a query
 try {
     //define a query string
-    $sql = 'SELECT `title`, `language`, `director`, `genre_1`, `genre_2` FROM `movies`';
+    $sql = 'SELECT `title`, `language`, `director`, `genre_1`, `genre_2`, `plot`, `id` FROM `movies`';
     // // var_dump($sql);
 
     //query the db
@@ -37,7 +37,7 @@ try {
         //while the db continuing answer
         while ($movie = $res->fetch_assoc()) {
             //push the answer in array
-            $movies[] = new Movie($movie['title'], $movie['director'], $movie['language'], new Genre([$movie['genre_1'], $movie['genre_2']]));
+            $movies[] = new Movie($movie['id'], $movie['title'], $movie['director'], $movie['language'], new Genre([$movie['genre_1'], $movie['genre_2']]), $movie['plot']);
         }
     } else {
         echo 'No results';

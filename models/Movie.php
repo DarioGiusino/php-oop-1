@@ -2,17 +2,21 @@
 include_once __DIR__ . '/Genre.php';
 class Movie
 {
+    public $id;
     public $title;
     public $director;
     public $language;
     public $genres;
+    public $plot;
 
-    public function __construct($_title, $_director, $_language, Genre $_genres = null)
+    public function __construct($_id, $_title, $_director, $_language, Genre $_genres = null, $_plot)
     {
+        $this->id = $_id;
         $this->title = $_title;
         $this->director = $_director;
         $this->language = $_language;
         $this->setGenre($_genres->name);
+        $this->plot = $_plot;
     }
 
     public function getFullDescription()

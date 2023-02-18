@@ -41,13 +41,13 @@
           <!-- single movie -->
           <li
             v-for="movie in movies"
-            :key="movie.title"
+            :key="movie.id"
             class="list-group-item"
             role="button"
             data-bs-toggle="collapse"
-            data-bs-target="#multiCollapseExample2"
+            :data-bs-target="`#multiCollapseExample${movie.id}`"
             aria-expanded="false"
-            aria-controls="multiCollapseExample2"
+            :aria-controls="`multiCollapseExample${movie.id}`"
           >
             <!-- movie title -->
             <h3>{{movie.title}}</h3>
@@ -61,12 +61,13 @@
             <!-- movie plot -->
             <div class="row">
               <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div
+                  class="collapse multi-collapse"
+                  :id="`multiCollapseExample${movie.id}`"
+                >
                   <div class="card card-body">
                     <h5>Trama:</h5>
-                    Some placeholder content for the first collapse component of
-                    this multi-collapse example. This panel is hidden by default
-                    but revealed when the user activates the relevant trigger.
+                    <p>{{movie.plot}}</p>
                   </div>
                 </div>
               </div>
