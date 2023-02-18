@@ -30,11 +30,13 @@
       <h1 class="text-center my-3">Movies List</h1>
       <div class="container">
         <ul class="list-group">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
+          <li v-for="movie in movies" class="list-group-item">
+            <h3>{{movie.title}}</h3>
+            <p>
+              Genere: {{movie.genres}} - Regia: {{movie.director}} - Lingua:
+              {{movie.language}}
+            </p>
+          </li>
         </ul>
       </div>
     </div>
