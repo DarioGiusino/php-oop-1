@@ -41,6 +41,7 @@
           <!-- single movie -->
           <li
             v-for="movie in movies"
+            :key="movie.title"
             class="list-group-item"
             role="button"
             data-bs-toggle="collapse"
